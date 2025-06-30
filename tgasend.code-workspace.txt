@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clone via API</title>
+    <style>
+        body { font-family: Arial; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Dados da API</h1>
+    <div id=" ac71d39c-fd57-4fde-81bc-ac37f24b8178  ">Carregando...</div>
+
+    <script>
+        // Substitua SUA_CHAVE_API pela sua chave válida
+        const API_KEY = " ac71d39c-fd57-4fde-81bc-ac37f24b8178";
+        const API_URL = "https://api.site-original.com/data";
+
+        fetch(API_URL, {
+            headers: { "Authorization": API_KEY }
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("dados-api").innerHTML = 
+                JSON.stringify(data, null, 2);
+        })
+        .catch(error => {
+            document.getElementById("dados-api").innerHTML = 
+                "Erro ao carregar API: " + error;
+        });
+    </script>
+</body>
+</html>
